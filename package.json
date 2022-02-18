@@ -1,0 +1,52 @@
+{
+  "name": "vitepress-theme-doc",
+  "version": "1.0.0",
+  "description": "VUE 官网风格主题",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./config": "./src/vitepress/config/baseConfig.js",
+    "./highlight": "./src/vitepress/config/highlight.js"
+  },
+  "files": [
+    "src",
+    "types"
+  ],
+  "keywords": [
+    "vite",
+    "vue3",
+    "vitepress",
+    "theme",
+    "vitepress-theme",
+    "vue",
+    "design-system"
+  ],
+  "author": "AliMales",
+  "license": "ISC",
+  "publishConfig": { "AliMales:registry": "https://npm.pkg.github.com" },
+  "scripts": {
+    "lint": "prettier --check --write --parser typescript \"{__tests__,docs,src,types}/**/*.ts\"",
+    "lint:fail": "prettier --check --parser typescript \"{__tests__,docs,src,types}/**/*.ts\"",
+    "type": "tsc --noEmit",
+    "test": "yarn lint && yarn type",
+    "dev": "vitepress dev demo",
+    "demo-build": "vitepress build demo",
+    "serve": "yarn demo-build && vitepress serve demo"
+  },
+  "dependencies": {
+    "@docsearch/css": "3.0.0-alpha.50",
+    "@docsearch/js": "3.0.0-alpha.50",
+    "@vueuse/core": "^7.6.2",
+    "body-scroll-lock": "4.0.0-beta.0",
+    "normalize.css": "^8.0.1",
+    "shiki": "^0.10.1"
+  },
+  "devDependencies": {
+    "@types/body-scroll-lock": "^3.1.0",
+    "@types/estree": "^0.0.51",
+    "prettier": "^2.5.1",
+    "typescript": "~4.5.5",
+    "vitepress": "^0.20.9",
+    "vue": "^3.2.26"
+  }
+}

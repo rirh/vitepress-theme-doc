@@ -1,21 +1,23 @@
 <script lang="ts" setup>
-import VPNavBarTitle from './VPNavBarTitle.vue'
-import VPNavBarSearch from './VPNavBarSearch.vue'
-import VPNavBarMenu from './VPNavBarMenu.vue'
-import VPNavBarAppearance from './VPNavBarAppearance.vue'
-import VPNavBarSocialLinks from './VPNavBarSocialLinks.vue'
-import VPNavBarExtra from './VPNavBarExtra.vue'
-import VPNavBarHamburger from './VPNavBarHamburger.vue'
+import VPNavBarTitle from "./VPNavBarTitle.vue";
+import VPNavBarSearch from "./VPNavBarSearch.vue";
+import VPNavBarMenu from "./VPNavBarMenu.vue";
+import VPNavBarAppearance from "./VPNavBarAppearance.vue";
+import VPNavBarSocialLinks from "./VPNavBarSocialLinks.vue";
+import VPNavBarExtra from "./VPNavBarExtra.vue";
+import VPNavBarHamburger from "./VPNavBarHamburger.vue";
 
 defineProps<{
-  isScreenOpen: boolean
-}>()
+  isScreenOpen: boolean;
+}>();
 </script>
 
 <template>
   <div class="VPNavBar">
     <div class="container">
-      <VPNavBarTitle />
+      <VPNavBarTitle>
+        <slot />
+      </VPNavBarTitle>
 
       <div class="content">
         <VPNavBarSearch class="search" />
